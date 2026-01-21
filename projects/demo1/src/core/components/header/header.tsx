@@ -1,19 +1,23 @@
-import reactLogo from '@assets/react.svg'
-import viteLogo from '/vite.svg'
-import './header.css'
-export const Header: React.FC = () => {
+import type { ReactNode } from "react";
+import "./header.css";
+
+// interface Props {
+//     readonly title: string,
+//     readonly subTittle: string
+// }
+
+type Props = {
+    readonly title: string;
+    readonly subTittle: string;
+    readonly children: ReactNode;
+};
+
+export const Header: React.FC<Props> = ({ title, subTittle, children }) => {
     return (
         <header>
-            <div>
-                <a href="https://vite.dev" target="_blank">
-                    <img src={viteLogo} className="logo" alt="Vite logo" />
-                </a>
-                <a href="https://react.dev" target="_blank">
-                    <img src={reactLogo} className="logo react" alt="React logo" />
-                </a>
-            </div>
-            <h1>Vite + React</h1>
+            {children}
+            <h1>{title}</h1>
+            <p className="subtitle">{subTittle}</p>
         </header>
-    )
-}
-
+    );
+};
