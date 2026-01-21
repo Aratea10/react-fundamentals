@@ -8,7 +8,9 @@ const HomePage = React.lazy(() => import("@features/home/home-page"));
 const DashboardPage = React.lazy(
     () => import("@features/dashboard/dashboard-page")
 );
-const ProductsPage = React.lazy(() => import('@features/products/products-page'))
+const ProductsPage = React.lazy(
+    () => import("@features/products/products-page")
+);
 
 export const routes: RouteObject[] = [
     {
@@ -31,6 +33,10 @@ export const routes: RouteObject[] = [
                 path: "/products",
                 Component: ProductsPage,
                 id: "Productos",
+            },
+            {
+                path: "/products/:id",
+                Component: ProductsPage,
             },
             {
                 path: "/dashboard",
