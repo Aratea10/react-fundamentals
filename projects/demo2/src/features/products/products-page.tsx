@@ -1,6 +1,6 @@
 import { useParams } from "react-router";
-import { ProductDetail } from "./compoents/product-detail/product-detail";
-import { ProductsList } from "./compoents/products-list/products-list";
+import { ProductDetail } from "./components/product-detail/product-detail";
+import { ProductsList } from "./components/products-list/products-list";
 
 export const ProductsPage: React.FC = () => {
     const { id } = useParams();
