@@ -1,14 +1,16 @@
 export type Product = {
-  id: string;
-  name: string;
-  model: string;
-  vehicleClass: string;
-  manufacturer: string;
-  length: number;
-  costs: number;
-  crew: number;
-  passengers: number;
-  maxSpeed: number;
-  cargoCapacity: number;
-  consumables: string;
+    id: string;
+    name: string;
+    model: string;
+    vehicleClass: string;
+    manufacturer: string;
+    length: number;
+    costs: number;
+    crew: number;
+    passengers: number;
+    maxSpeed: number;
+    cargoCapacity: number;
+    consumables: string;
 };
+
+export type ProductDTO = Omit<Product, 'id'>
